@@ -1,0 +1,161 @@
+:root {
+  /* color */
+  --color-uiBtn: burlywood;
+}
+
+* {
+  user-select: none;
+  font-weight: bold;
+}
+
+body {
+  background: rgb(29, 26, 26);
+}
+
+.background {
+  background-image: url("img/background.png");
+  background-size: cover;
+
+  border-radius: 5%;
+  border: 2px solid rgb(0, 0, 0);
+  position: absolute;
+
+  width: 800px;
+  height: 420px;
+
+  /* ★この部分がモバイルサイズように小さくなっとき、画面がずれる結果になる */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bestStageNTxt {
+  position: absolute;
+  font-size: 1.4rem;
+  color: green;
+  text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+
+  padding: 10px 20px;
+}
+
+.stageNumberTxt {
+  position: absolute;
+  font-size: 1.4rem;
+  color: black;
+  padding: 10px 20px;
+  text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+  right: 0;
+}
+
+.ui {
+  position: relative;
+  width: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.ui_startBtn {
+  display: inline-block;
+  border: 3px solid black;
+  background-color: var(--color-uiBtn);
+  border-radius: 10%;
+  font-size: 1.5em;
+  margin: 5px 0;
+  padding: 0.4em 0.75em;
+  transition: all 200ms;
+}
+.ui_startBtn:hover {
+  transform: scale(1.1);
+}
+
+.ui_timer {
+  display: inline-block;
+  border: 4px solid black;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  font-size: 1.5em;
+  font-weight: normal;
+  margin: 0 0 5px 0;
+  padding: 0 0.8em;
+}
+.ui_counter {
+  display: inline-block;
+  background-color: tomato;
+  font-weight: lighter;
+  color: aliceblue;
+  border-radius: 50%;
+  border: 4px solid black;
+  font-size: 2em;
+  margin: 0 0 5px 0;
+  padding: 0 13px;
+}
+
+.ui_reSultPanel {
+  position: absolute;
+  border-radius: 10px;
+  font-size: 2em;
+  width: 400px;
+  height: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 2em 0 0 0;
+  background-color: rgba(0, 0, 0, 0.658);
+}
+
+.reStartBtn {
+  background-color: var(--color-uiBtn);
+  border: 3px solid black;
+  margin-top: 0.5em;
+  border-radius: 10px;
+  padding: 0.5rem 0.75rem;
+  font-size: 1.1em;
+  transition: all 45ms ease-in;
+}
+.reStartBtn:hover {
+  transform: scale(1.15);
+}
+
+.ui_resultTxt {
+  color: whitesmoke;
+  font-size: 2.5rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+.field {
+  position: absolute;
+  background-color: rgba(255, 0, 179, 0.281);
+  width: 100%;
+  left: 0%;
+  top: 55%;
+  bottom: 5%;
+}
+
+.item {
+  position: absolute;
+  cursor: pointer;
+  /* background-color: rgba(210, 105, 30, 0.397); */
+  /* border: 1px crimson solid; */
+  transform: translate(100px, 50px);
+  transform: scale(1);
+  transition: all 200ms;
+  animation: itemFirstSizeAnim 500ms;
+}
+
+@keyframes itemFirstSizeAnim {
+  0% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.item:hover {
+  transform: scale(1.2);
+}
