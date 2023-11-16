@@ -1,3 +1,4 @@
+console.log("This is Main");
 /*UI*/
 const startBtn = document.querySelector(".ui_startBtn");
 const timerTxt = document.querySelector(".ui_timer");
